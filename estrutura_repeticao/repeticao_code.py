@@ -198,21 +198,128 @@ def pega_txt(msg):
 #     value = input('Próximo: ')
 
 
-num = pega_int('Digite o numero que deseja verificar se é primo: ')
-while True:
-    if(num<=1):
-        num = pega_int('Invalido: ')
-        continue
+# num = pega_int('Digite o numero que deseja verificar se é primo: ')
+# while True:
+#     if(num<=1):
+#         num = pega_int('Invalido: ')
+#         continue
 
-    i = 2
-    count = 0
-    while(i<=num/2):
-        if(i != 1 and num%i == 0):
-            count += 1
-        i +=1
-    break
+#     i = 2
+#     count = 0
+#     while(i<=num/2):
+#         print(f'Num {num}, i {i}')
+#         if(num%i == 0):
+#             count += 1
+#             print(f'{num} é divisível por: {i}, ')
+#         i +=1
+#     break
 
-if count>0:
-    print('Não é primo')
-else:
-    print('É primo')
+# if count>0:
+#     print('Não é primo')
+# else:
+#     print('É primo')
+
+# n = pega_int('É primo? -> ')
+# if (n == 1 or n == 2):
+#     print('É primo, e não foram feitas nenhuma divisão.')
+# elif(n % 2 == 0):
+#     print('Não é primo, e foi feita 1 divisão.')
+# else:
+#     divisoes = 0
+#     i = 3
+#     primo = False
+#     while(i<=n):
+#         divisoes += 1
+        
+#         if(n%i == 0):
+#             break
+#         else:
+#             primo = True
+#         i += 2
+
+# if primo:
+#     print(f'Primo. {divisoes} divisões.')
+# else:
+#     print(f'Não é primo. {divisoes} divisões.')
+
+# numero = int(input("Digite um numero inteiro: "))
+# if numero == 1 or numero == 2:
+#     print(
+#         f"{numero} é primo e foram executadas 0 divisões para descobrir isso"
+#     )
+# elif numero % 2 == 0:
+#     print(
+#         f"{numero} não é primo e foi executada uma divisão para descobrir isso"
+#     )
+# else:
+#     contador = 1
+#     primo = True
+#     for i in range(3, numero, 2):
+#         print(f'I: {i}, numero: {numero}')
+#         contador += 1
+#         if numero % i == 0:
+#             primo = False
+#             break
+#     if primo:
+#         print(
+#             f"{numero} é primo e foram executadas"
+#             f" {contador} divisões para descobrir isso"
+#         )
+#     else:
+#         print(
+#             f"{numero} não é primo e foram executadas"
+#             f" {contador} divisões para descobrir isso")
+
+# n = pega_int('Quantas notas serão registradas? ')
+# i = 0
+# sum = 0
+# while(i<n):
+#     nota = pega_float(f'Nota {i+1}: ')
+#     sum += nota
+#     i += 1 
+# media = sum/n
+# print(f'A soma das notas é {sum}, e a média é {media:.2f}')
+
+# n = pega_int('Quantas pessoas?')
+# sum = 0
+# for i in range(n):
+#     idade = pega_int('Qual a idade? ')
+#     sum += idade
+# media = sum/n
+# faixa_etaria = ''
+# if(media<=25):
+#      faixa_etaria = 'Jovem'
+# elif(media <=60):
+#     faixa_etaria = 'Adulta'
+# else:
+#     faixa_etaria = 'Idosa'
+# print(f'A turma é {faixa_etaria}')
+
+# qtd_eleitores = pega_int('Quantos eleitores? ')
+# votos_cd_um = 0
+# votos_cd_dois = 0
+# votos_cd_tres = 0
+# votos_brancos_nulos = 0
+
+# for i in range(qtd_eleitores):
+#     voto = pega_int('Digite seu voto: ')
+#     voto_valido = False
+#     while(not voto_valido):
+#         if(voto == 1):
+#             votos_cd_um += 1
+#             voto_valido = True
+#         elif(voto == 2):
+#             voto_valido = True
+#             votos_cd_dois += 1
+#         elif(voto == 3):
+#             voto_valido = True
+#             votos_cd_tres += 1
+#             voto_valido = True
+#         elif(voto == 0):
+#             voto_valido = True
+#             votos_brancos_nulos += 1
+#         else:
+#             voto = pega_int('Invalido, tente novamente: ')
+
+# print(f'Cd um: {votos_cd_um}, Cd dois: {votos_cd_dois}, Cd tres: {votos_cd_tres}')
+
