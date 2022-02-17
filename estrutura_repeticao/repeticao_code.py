@@ -323,3 +323,79 @@ def pega_txt(msg):
 
 # print(f'Cd um: {votos_cd_um}, Cd dois: {votos_cd_dois}, Cd tres: {votos_cd_tres}')
 
+# print('Loja Quase Dois - Tabela de preços')
+# preco = 1.99
+# for i in range(1, 51):
+#     print(f'{i} - R$ {i*preco}')
+
+# while True:
+#     preco_produto = -1
+#     while(preco_produto != 0):
+#         cod_produto = 1
+#         total = 0
+#         preco_produto = pega_float(f'Produto {cod_produto}: R$ ')
+#         total += preco_produto
+#         cod_produto += 1
+        
+#         if(preco_produto == 0):
+#             dinheiro = pega_float('Dinheiro: R$ ')
+#             troco = dinheiro - total
+#             print(f'Troco: R$ {troco}\n')
+#             break
+    
+
+# salario_inicial = 1000
+# aumento = 0.015
+# ano_base = 1995
+# ano_atual = 2022
+# salario_atual = salario_inicial
+# while(ano_base<=ano_atual):
+#     print(f'Salario em {ano_base}: R$ {salario_atual}; aumento de {aumento}%')
+#     salario_atual = salario_atual+(salario_atual*aumento)
+#     ano_base += 1
+
+#     if(ano_base>=1997):
+#         aumento = aumento*2
+
+
+# cod_aluno = pega_int('Codigo do aluno: ')
+# altura_aluno = pega_float('Altura do aluno: ')
+# maior_altura = altura_aluno
+# cod_mais_alto = cod_aluno
+# menor_altura = altura_aluno
+# cod_mais_baixo = cod_aluno
+# i = 1
+# while(i<10):
+#     cod_aluno = pega_int('Codigo do aluno: ')
+#     altura_aluno = pega_float('Altura do aluno: ')
+
+#     if(altura_aluno > maior_altura):
+#         maior_altura = altura_aluno
+#         cod_mais_alto = cod_aluno
+
+#     if(altura_aluno < menor_altura):
+#         menor_altura = altura_aluno
+#         cod_mais_baixo = cod_aluno
+
+
+#     i += 1
+# print(f'Mais alto: {cod_mais_alto}, altura: {maior_altura}')
+# print(f'Mais baixo: {cod_mais_baixo}, altura: {menor_altura}')
+
+valor_divida = pega_float('Valor da divida: ')
+qtd_parcelas = pega_int('Quantidade de parcelas: ')
+valor_juros = None
+if qtd_parcelas == 1:
+    valor_juros = 0
+elif qtd_parcelas == 3:
+    valor_juros = valor_divida*0.1
+elif qtd_parcelas == 6:
+    valor_juros = valor_divida*0.15
+elif qtd_parcelas == 9:
+    valor_juros = valor_divida*0.2
+else:
+    valor_juros = valor_divida*0.25
+
+valor_parcela = (valor_divida+valor_juros)/qtd_parcelas
+print('{:<10} {:<15} {:<15} {:<10}'.format('Valor da dívida', 'Valor dos juros', 'Qtd. Parcelas', 'Valor Parcela'))
+print('{:<15} {:<15} {:<15} {:<15}'.format(valor_divida, valor_juros, qtd_parcelas, valor_parcela))
