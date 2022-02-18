@@ -382,20 +382,118 @@ def pega_txt(msg):
 # print(f'Mais alto: {cod_mais_alto}, altura: {maior_altura}')
 # print(f'Mais baixo: {cod_mais_baixo}, altura: {menor_altura}')
 
-valor_divida = pega_float('Valor da divida: ')
-qtd_parcelas = pega_int('Quantidade de parcelas: ')
-valor_juros = None
-if qtd_parcelas == 1:
-    valor_juros = 0
-elif qtd_parcelas == 3:
-    valor_juros = valor_divida*0.1
-elif qtd_parcelas == 6:
-    valor_juros = valor_divida*0.15
-elif qtd_parcelas == 9:
-    valor_juros = valor_divida*0.2
-else:
-    valor_juros = valor_divida*0.25
+# valor_divida = pega_float('Valor da divida: ')
+# qtd_parcelas = pega_int('Quantidade de parcelas: ')
+# valor_juros = None
+# if qtd_parcelas == 1:
+#     valor_juros = 0
+# elif qtd_parcelas == 3:
+#     valor_juros = valor_divida*0.1
+# elif qtd_parcelas == 6:
+#     valor_juros = valor_divida*0.15
+# elif qtd_parcelas == 9:
+#     valor_juros = valor_divida*0.2
+# else:
+#     valor_juros = valor_divida*0.25
 
-valor_parcela = (valor_divida+valor_juros)/qtd_parcelas
-print('{:<10} {:<15} {:<15} {:<10}'.format('Valor da dívida', 'Valor dos juros', 'Qtd. Parcelas', 'Valor Parcela'))
-print('{:<15} {:<15} {:<15} {:<15}'.format(valor_divida, valor_juros, qtd_parcelas, valor_parcela))
+# valor_parcela = (valor_divida+valor_juros)/qtd_parcelas
+# print('{:<10} {:<15} {:<15} {:<10}'.format('Valor da dívida', 'Valor dos juros', 'Qtd. Parcelas', 'Valor Parcela'))
+# print('{:<15} {:<15} {:<15} {:<15}'.format(valor_divida, valor_juros, qtd_parcelas, valor_parcela))
+
+# total = 0
+# str_pedidos = ''
+
+
+# while True:
+    
+#     cod_produto = pega_int('Digite o codigo do produto ')
+#     if cod_produto == 0:
+#         break
+#     qtd = pega_int('Quantas unidades você deseja? ')
+#     preco = 0
+
+#     if cod_produto == 100 or cod_produto == 103:
+#         preco = 1.2
+#     elif cod_produto == 101 or cod_produto == 104:
+#         preco = 1.3
+#     elif cod_produto == 102:
+#         preco = 1.5
+#     elif cod_produto == 105:
+#         preco = 1
+#     else:
+#         print('Codigo invalido, tente novamente.')
+#         continue
+
+#     valor_parcial = qtd*preco
+#     str_pedidos += f'Cod: {cod_produto} ---- Qtd: {qtd} -------------- R$ {valor_parcial}\n'
+#     total += valor_parcial
+
+# str_pedidos += f'Total: ---------------------------- R$ {total:.2f}'
+# print(str_pedidos)
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# VOLTAR PARA FAZER USANDO DICIONÁRIO
+# qtd_questoes = pega_int('Quantas questoes? ')
+# i = 1
+# gabarito = ''
+# while(i<=qtd_questoes):
+#     gabarito += input(f'Questão {i}, resposta: ')
+#     gabarito += ' '
+#     i += 1
+
+while True:
+
+    nome_atleta = input('Qual o nome do atleta? ')
+    if(nome_atleta == '0'):
+        break
+
+    str_notas = ''
+    melhor_nota = 0
+    pior_nota = 10
+    sum = 0
+    for i in range(7):
+        nota = pega_float(f'Nota {i+1}: ')
+        sum += nota
+
+        str_notas += 'Nota: ' + str(nota)
+
+        if nota > melhor_nota:
+            melhor_nota = nota
+        if nota < pior_nota:
+            pior_nota = nota
+        
+    media = (sum-melhor_nota-pior_nota)/7
+    print('Resultado final:')
+    print(f'Atleta: {nome_atleta}')
+    print(f'Melhor nota: {melhor_nota}')
+    print(f'Pior nota: {pior_nota}')
+    print(f'Média: {media}')
+
+
+# numero = input('Digite o numero inteiro que deseja inverter: ')
+# index = len(numero)-1
+# while(index>=0):
+#     print(numero[index], end = '')
+#     index -= 1
+
+# n = pega_int('N: ')
+# m = 1
+# total = 0
+# aux = 1
+# while aux<=n:
+#     print(f'{aux}/{m},', end = ' ')
+#     total += aux/m
+#     aux += 1
+#     m += 2
+
+# print(f'Total: {total}')
+
+# n = pega_int('N: ')
+# aux = 1
+# h = 0
+# while aux <= n:
+#     print(f'1/{aux}, ', end = ' ')
+#     h += 1/aux
+#     aux += 1
+# print(f'Total: {h}')
+
