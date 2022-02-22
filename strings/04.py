@@ -12,7 +12,7 @@ while True:
 
         tam_nome = len(nome)
 
-        for i in range(1, tam_nome+1):
+        for i in range(tam_nome+1):
             for j in range(i):
                 print(f'{nome[j]}', end='')
             print()
